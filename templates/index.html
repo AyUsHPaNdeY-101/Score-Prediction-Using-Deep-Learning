@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL Score Predictor</title>
+</head>
+<body>
+    <h1>IPL Score Predictor</h1>   
+    <form action="/predict" method="post">
+        <label for="batting_team">Batting Team:</label>
+        <select id="batting_team" name="batting_team" required>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Delhi Daredevils">Delhi Daredevils</option>
+            <option value="Kings XI Punjab">Kings XI Punjab</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        </select><br><br>
+
+        <label for="bowling_team">Bowling Team:</label>
+        <select id="bowling_team" name="bowling_team" required>
+            <option value="Chennai Super Kings">Chennai Super Kings</option>
+            <option value="Delhi Daredevils">Delhi Daredevils</option>
+            <option value="Kings XI Punjab">Kings XI Punjab</option>
+            <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+            <option value="Mumbai Indians">Mumbai Indians</option>
+            <option value="Rajasthan Royals">Rajasthan Royals</option>
+            <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+            <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+        </select><br><br>
+
+        <label for="venue">Venue:</label>
+        <input type="text" id="venue" name="venue" required><br><br>
+
+        <label for="runs">Current Runs:</label>
+        <input type="number" step="any" id="runs" name="runs" required><br><br>
+
+        <label for="wickets">Current Wickets:</label>
+        <input type="number" step="any" id="wickets" name="wickets" required><br><br>
+
+        <label for="overs">Current Overs (e.g. 10.5):</label>
+        <input type="number" step="any" id="overs" name="overs" required><br><br>
+
+        <label for="runs_last_5">Runs in last 5 overs:</label>
+        <input type="number" step="any" id="runs_last_5" name="runs_last_5" required><br><br>
+        
+        <label for="wickets_last_5">Wickets in last 5 overs:</label>
+        <input type="number" step="any" id="wickets_last_5" name="wickets_last_5" required><br><br>
+
+        <button type="submit" value="Predict">Predict</button>
+    </form>
+    
+    {% if prediction_text %}
+        <h3>Prediction Result:</h3>
+        <p>{{ prediction_text }}</p>
+    {% endif %} 
+</body>
+</html>
