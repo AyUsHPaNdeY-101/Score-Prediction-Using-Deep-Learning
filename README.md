@@ -37,7 +37,7 @@ It uses a **Feedforward Neural Network** trained on historical IPL data to make 
 
 - **Machine Learning**: TensorFlow, Keras, Scikit-Learn, Pandas, NumPy
 - **Backend API**: Flask
-- **Frontend UI**: HTML/CSS/JavaScript
+- **Frontend UI**: HTML
 
 ---
 
