@@ -1,54 +1,95 @@
-# 🏏 IPL Score Predictor Using Deep Learning
+<div align="center">
 
-Welcome to the **IPL Score Predictor**! This project leverages the power of Deep Learning to predict the final innings score of an Indian Premier League (IPL) match based on the current match situation. Whether you're a cricket fanatic or a data science enthusiast, this project hits it out of the park! 🚀
+# 🏏 IPL Score Predictor Using Deep Learning 🏆
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg?style=for-the-badge&logo=python&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000.svg?style=for-the-badge&logo=Keras&logoColor=white)
+![Flask](https://img.shields.io/badge/Flask-000000.svg?style=for-the-badge&logo=Flask&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+
+*Predicting the thrill of T20 cricket using the power of Neural Networks!*
+
+[Explore the Code](#-project-structure) • [How to Run](#-how-to-run-locally) • [Tech Stack](#%EF%B8%8F-tech-stack)
+
+</div>
+
+---
 
 ## 🌟 What Does It Do?
 
-Ever wondered what the final score will be while watching the first innings of a T20 match? This model takes in real-time match stats and predicts the final total. 
+Ever wondered what the final score will be while watching the first innings of a T20 match? This model takes in real-time match stats and predicts the final total with impressive accuracy!
 
-It uses a **Feedforward Neural Network** (built with TensorFlow & Keras) trained on historical IPL data to make intelligent estimations based on:
-- 🏏 Current **Runs**
-- 📉 Current **Wickets** fallen
-- ⏱️ Current **Overs** bowled
-- 🔥 **Runs** scored in the last 5 overs
-- 🎯 **Wickets** fallen in the last 5 overs
+It uses a **Feedforward Neural Network** trained on historical IPL data to make intelligent estimations based on:
+
+| Match Metric | Description |
+| :--- | :--- |
+| 🏏 **Current Runs** | The total runs scored by the batting team so far. |
+| 📉 **Current Wickets** | The number of wickets fallen. |
+| ⏱️ **Current Overs** | The number of overs bowled. |
+| 🔥 **Runs in Last 5 Overs** | Momentum indicator (runs scored recently). |
+| 🎯 **Wickets in Last 5 Overs** | Pressure indicator (wickets fallen recently). |
+
+---
+
+## 📸 Sneak Peek
+
+*(Add a screenshot of your beautiful web interface here!)*  
+`![App Screenshot](https://via.placeholder.com/800x400.png?text=IPL+Score+Predictor+App)`
+
+---
+
+## ⚙️ Tech Stack
+
+- **Machine Learning**: TensorFlow, Keras, Scikit-Learn, Pandas, NumPy
+- **Backend API**: Flask
+- **Frontend UI**: HTML/CSS/JavaScript
+
+---
 
 ## 📂 Project Structure
 
 Here's how the locker room is organized:
 
-- 📁 `data/` - Home pitch. Contains the dataset `ipl_data.csv` used for training the model.
-- 📁 `model/` - The playbook. Stores the trained Keras deep learning model (`ipl_model.keras`) and the data scaler (`scaler.pkl`).
-- 📁 `templates/` - The stadium. Contains the `index.html` template for our beautiful web interface.
-- 📜 `app.py` - The umpire. A Flask web application that serves the frontend and makes live predictions using the trained model.
-- ⚙️ `train.py` - The coach. The script responsible for data preprocessing, training the neural network, evaluating its performance, and saving the model.
-- 📦 `requirements.txt` - The kit bag. Lists all necessary Python dependencies (`tensorflow`, `flask`, `scikit-learn`, `pandas`, etc.).
+```text
+ipl_score_predictor/
+│
+├── 📁 data/                 # 🏏 Home pitch: Contains the training dataset (ipl_data.csv)
+├── 📁 model/                # 🧠 The playbook: Stores trained model & scaler
+├── 📁 templates/            # 🏟️ The stadium: Contains the frontend UI (index.html)
+│
+├── 📜 app.py                # 📢 The umpire: Flask app serving live predictions
+├── ⚙️ train.py              # 🏋️ The coach: Data prep, training, and model evaluation
+└── 📦 requirements.txt      # 🎒 The kit bag: Python dependencies
+```
+
+---
 
 ## 🚀 How to Run Locally
 
 Ready to play? Follow these steps to get the project running on your local machine.
 
-### 1. Install Dependencies
+### 1️⃣ Install Dependencies
 Make sure you have Python installed, then gear up by running:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2. Prepare the Data
+### 2️⃣ Prepare the Data
 Ensure your `ipl_data.csv` is securely placed inside the `data/` directory.
 
-### 3. Train the Model (Optional)
+### 3️⃣ Train the Model (Optional)
 If you want to train the deep learning model from scratch, run the training script. It will preprocess the data, train the model over 10 epochs, and save the artifacts in the `model/` directory:
 ```bash
 python train.py
 ```
 
-### 4. Start the Flask App
+### 4️⃣ Start the Flask App
 Fire up the web application to start predicting scores!
 ```bash
 python app.py
 ```
-*Note: Open `http://127.0.0.1:5000/` in your browser to access the interactive web interface.*
+> **Note**: Open `http://127.0.0.1:5000/` in your browser to access the interactive web interface.
 
 ---
 
