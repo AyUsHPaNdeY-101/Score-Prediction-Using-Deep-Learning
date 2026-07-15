@@ -32,12 +32,6 @@ It uses a **Feedforward Neural Network** trained on historical IPL data to make 
 
 ---
 
-## 📸 Sneak Peek
-
-*(Add a screenshot of your beautiful web interface here!)*  
-`![App Screenshot](https://via.placeholder.com/800x400.png?text=IPL+Score+Predictor+App)`
-
----
 
 ## ⚙️ Tech Stack
 
